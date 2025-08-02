@@ -1,103 +1,66 @@
-import Image from "next/image";
+"use client"
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      <div className='px-6'>
+        <div className='max-w-lg mx-auto py-24'>
+          <div className='space-y-12 text-sm:text-base'>
+            <div className='mb-12'>
+              <h2 className='font-medium'>"I keep researching instead of building."</h2>
+              <p className='text-zinc-500'>Been there.</p>
+            </div>
+            <div className='mb-12'>
+              <h2 className='font-medium'>"How do I make myself start?"</h2>
+              <p className='text-zinc-500'>You don’t. Discipline is overrated. Structure wins.</p>
+            </div>
+            <div className='mb-12'>
+              <h2 className='font-medium'>"Pomodoro breaks my rhythm."</h2>
+              <p className='text-zinc-500'>Exactly. You need depth, not a timer.</p>
+            </div>
+            <div className='mb-12'>
+              <h2 className='font-medium'>"I blocked all distractions, still got nothing done."</h2>
+              <p className='text-zinc-500'>Because productivity isn’t about restriction — it’s about direction.</p>
+            </div>
+            <hr className='mb-12 border-t border-[#ffffff1a]' />
+            <div>
+              <h2 className='font-semibold text-3xl mb-1'>One thing.</h2>
+              <p className='text-zinc-500 mb-12'>Minimalistic productivity tool that actually works.</p>
+              <video className='mb-12 border border-[#ffffff1a] flex justify-center items-center' src="focus-demo.mp4" autoPlay loop muted playsInline />
+              <ul className='my-16'>
+                <li>1. Set your focus</li>
+                <li className='text-zinc-500 mb-10'>To get shit done, you need to focus on one thing at a time.</li>
+                <li>2. Work on it for 45 minutes (at least)</li>
+                <li className='text-zinc-500 mb-10'>Keep going longer if you feel like it. The goal is to get into the flow.</li>
+                <li>3. Reflect on your session</li>
+                <li className='text-zinc-500 mb-10'>Was it the right thing to do? Did you get closer to shipping?</li>
+                <li>4. Rest for... as long as you want</li>
+                <li className='text-zinc-500 mb-10'>Get back when you're ready for another session.</li>
+              </ul>
+              <hr className='mb-12 border-t border-[#ffffff1a]' />
+              <div className='mb-12'>
+                <h2 className='font-medium'>It's simple, but it works</h2>
+                <p className='text-zinc-500'>Try it yourself</p>
+              </div>
+              <hr className='mb-12 border-t border-[#ffffff1a]' />
+              <div>
+                <h2 className='font-medium'>Start focusing</h2>
+                <p className='text-zinc-500'>Stop doom scrolling — start creating</p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+                <div className='flex space-x-4 mt-6'>
+                  <button
+                      className='w-full h-[40px] rounded bg-[#141414] border border-[#2c2c2c] text-sm text-zinc-400 hover:text-zinc-300 transition cursor-pointer flex items-center justify-center gap-4'
+                      onClick={() => window.location.href = '/one-thing-focus.msi'}
+                  >
+                    <img src="WindowsNewIcon.svg" alt="" />
+                    Windows
+                  </button>
+                </div>
+
+                <p className='text-xs text-zinc-500 mt-3 text-center'>MacOS e Linux coming soon</p>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
   );
 }
