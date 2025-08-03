@@ -4,7 +4,7 @@ export default function Home() {
   return (
       <div className='px-6'>
         <div className='max-w-lg mx-auto py-24'>
-          <div className='space-y-12 text-sm:text-base'>
+          <div className='space-y-12 text-sm:text-base text-white'>
             <div className='mb-12'>
               <h2 className='font-medium'>"I keep researching instead of building."</h2>
               <p className='text-zinc-500'>Been there.</p>
